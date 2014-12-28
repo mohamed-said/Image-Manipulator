@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>693</width>
+    <height>468</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="2" rowspan="2">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>566</width>
+         <height>407</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="toolBox">
+      <property name="minimumSize">
+       <size>
+        <width>85</width>
+        <height>330</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>85</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>ToolBox</string>
+      </property>
+      <widget class="QCheckBox" name="isFillBox">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>207</y>
+         <width>41</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Fill</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="isOutlineBox">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>180</y>
+         <width>61</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Outline</string>
+       </property>
+      </widget>
+      <widget class="ColorButton" name="buttonBackColor">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>280</y>
+         <width>40</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
+      <widget class="ColorButton" name="buttonFronColor">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>260</y>
+         <width>40</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>8</x>
+         <y>20</y>
+         <width>71</width>
+         <height>136</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QToolButton" name="arrowButton">
+            <property name="minimumSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Line</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/Icons.qrc">
+              <normaloff>:/MainWindow/Icons/arrow.png</normaloff>:/MainWindow/Icons/arrow.png</iconset>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="selectionButton">
+            <property name="minimumSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Triangle</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/Icons.qrc">
+              <normaloff>:/MainWindow/Icons/Selection.png</normaloff>:/MainWindow/Icons/Selection.png</iconset>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QToolButton" name="squareButton">
+            <property name="minimumSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Square</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/Icons.qrc">
+              <normaloff>:/MainWindow/Icons/Square.png</normaloff>:/MainWindow/Icons/Square.png</iconset>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="buttonRectangle">
+            <property name="minimumSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Rectangle</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/Icons.qrc">
+              <normaloff>:/MainWindow/Icons/Rectangle.png</normaloff>:/MainWindow/Icons/Rectangle.png</iconset>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QToolButton" name="buttonCircle">
+            <property name="minimumSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Circle</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/Icons.qrc">
+              <normaloff>:/MainWindow/Icons/Circle.png</normaloff>:/MainWindow/Icons/Circle.png</iconset>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="ellipseButton">
+            <property name="minimumSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Ellipse</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/Icons.qrc">
+              <normaloff>:/MainWindow/Icons/Ellipse.png</normaloff>:/MainWindow/Icons/Ellipse.png</iconset>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QToolButton" name="lineButton">
+            <property name="minimumSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Line</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/Icons.qrc">
+              <normaloff>:/MainWindow/Icons/Line.png</normaloff>:/MainWindow/Icons/Line.png</iconset>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="triangleButton">
+            <property name="minimumSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Triangle</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/Icons.qrc">
+              <normaloff>:/MainWindow/Icons/Triangle.png</normaloff>:/MainWindow/Icons/Triangle.png</iconset>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QComboBox" name="zoomBox">
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>400%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>300%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>200%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>100%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>90%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>70%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>50%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10%</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="ImageControl" name="imageControl" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>693</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_As"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuFilter">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>&amp;Filter</string>
+    </property>
+    <widget class="QMenu" name="menuRed">
+     <property name="title">
+      <string>Red</string>
+     </property>
+     <addaction name="actionIncrease_Red"/>
+     <addaction name="actionDecrease_Red"/>
+    </widget>
+    <widget class="QMenu" name="menuContrast">
+     <property name="title">
+      <string>Contrast</string>
+     </property>
+     <addaction name="actionIncrease_Contrast"/>
+     <addaction name="actionDecrease_Contrast"/>
+    </widget>
+    <widget class="QMenu" name="menuBrightness">
+     <property name="title">
+      <string>Brightness</string>
+     </property>
+     <addaction name="actionIncrease_Brightness"/>
+     <addaction name="actionDecrease_Brightness"/>
+    </widget>
+    <widget class="QMenu" name="menuBlue">
+     <property name="title">
+      <string>Blue</string>
+     </property>
+     <addaction name="actionIncrease_Blue"/>
+     <addaction name="actionDecrease_Blue"/>
+    </widget>
+    <widget class="QMenu" name="menuGreen">
+     <property name="title">
+      <string>Green</string>
+     </property>
+     <addaction name="actionIncrease_Green"/>
+     <addaction name="actionDecrease_Green"/>
+    </widget>
+    <addaction name="actionBlur"/>
+    <addaction name="separator"/>
+    <addaction name="menuBrightness"/>
+    <addaction name="menuContrast"/>
+    <addaction name="separator"/>
+    <addaction name="menuRed"/>
+    <addaction name="menuBlue"/>
+    <addaction name="menuGreen"/>
+    <addaction name="separator"/>
+    <addaction name="actionGrayscale"/>
+    <addaction name="actionInvert_Colors"/>
+    <addaction name="actionNegative"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+   </widget>
+   <widget class="QMenu" name="menuImage">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>&amp;Image</string>
+    </property>
+    <addaction name="actionResize"/>
+    <addaction name="actionCrop"/>
+    <addaction name="separator"/>
+    <addaction name="actionRotate_90_Clockwise"/>
+    <addaction name="actionRotate_90_Anti_Clockwise"/>
+    <addaction name="separator"/>
+    <addaction name="actionFlip_Horizontal"/>
+    <addaction name="actionFlip_Vertical"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuImage"/>
+   <addaction name="menuFilter"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionBlur">
+   <property name="text">
+    <string>Blur</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save As</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionRotate_90_Clockwise">
+   <property name="text">
+    <string>Rotate 90 Clockwise</string>
+   </property>
+  </action>
+  <action name="actionRotate_90_Anti_Clockwise">
+   <property name="text">
+    <string>Rotate 90 Anti Clockwise</string>
+   </property>
+  </action>
+  <action name="actionResize">
+   <property name="text">
+    <string>Resize</string>
+   </property>
+  </action>
+  <action name="actionCrop">
+   <property name="text">
+    <string>Crop</string>
+   </property>
+  </action>
+  <action name="actionFlip_Horizontal">
+   <property name="text">
+    <string>Flip Horizontal</string>
+   </property>
+  </action>
+  <action name="actionFlip_Vertical">
+   <property name="text">
+    <string>Flip Vertical</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionInvert_Colors">
+   <property name="text">
+    <string>Invert Colors</string>
+   </property>
+  </action>
+  <action name="actionGrayscale">
+   <property name="text">
+    <string>Grayscale</string>
+   </property>
+  </action>
+  <action name="actionNegative">
+   <property name="text">
+    <string>Negative</string>
+   </property>
+  </action>
+  <action name="actionIncrease_Red">
+   <property name="text">
+    <string>Increase Red</string>
+   </property>
+  </action>
+  <action name="actionDecrease_Red">
+   <property name="text">
+    <string>Decrease Red</string>
+   </property>
+  </action>
+  <action name="actionIncrease_Brightness">
+   <property name="text">
+    <string>Increase Brightness</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+PgUp</string>
+   </property>
+  </action>
+  <action name="actionDecrease_Brightness">
+   <property name="text">
+    <string>Decrease Brightness</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+PgDown</string>
+   </property>
+  </action>
+  <action name="actionIncrease_Contrast">
+   <property name="text">
+    <string>Increase Contrast</string>
+   </property>
+  </action>
+  <action name="actionDecrease_Contrast">
+   <property name="text">
+    <string>Decrease Contrast</string>
+   </property>
+  </action>
+  <action name="actionIncrease_Blue">
+   <property name="text">
+    <string>Increase Blue</string>
+   </property>
+  </action>
+  <action name="actionDecrease_Blue">
+   <property name="text">
+    <string>Decrease Blue</string>
+   </property>
+  </action>
+  <action name="actionIncrease_Green">
+   <property name="text">
+    <string>Increase Green</string>
+   </property>
+  </action>
+  <action name="actionDecrease_Green">
+   <property name="text">
+    <string>Decrease Green</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ImageControl</class>
+   <extends>QWidget</extends>
+   <header>imagecontrol.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ColorButton</class>
+   <extends>QPushButton</extends>
+   <header>colorbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>arrowButton</tabstop>
+  <tabstop>selectionButton</tabstop>
+  <tabstop>squareButton</tabstop>
+  <tabstop>buttonRectangle</tabstop>
+  <tabstop>buttonCircle</tabstop>
+  <tabstop>ellipseButton</tabstop>
+  <tabstop>lineButton</tabstop>
+  <tabstop>triangleButton</tabstop>
+  <tabstop>isOutlineBox</tabstop>
+  <tabstop>isFillBox</tabstop>
+  <tabstop>buttonFronColor</tabstop>
+  <tabstop>buttonBackColor</tabstop>
+  <tabstop>scrollArea</tabstop>
+ </tabstops>
+ <resources>
+  <include location="Resources/Icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

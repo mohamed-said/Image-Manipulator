@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/MainWindow/Icons">
+        <file>Circle.png</file>
+        <file>Ellipse.png</file>
+        <file>Line.png</file>
+        <file>Rectangle.png</file>
+        <file>Selection.png</file>
+        <file>Square.png</file>
+        <file>Triangle.png</file>
+        <file>arrow.png</file>
+    </qresource>
+</RCC>
